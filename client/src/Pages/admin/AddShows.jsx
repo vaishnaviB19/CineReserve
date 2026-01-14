@@ -4,7 +4,7 @@ import Loading from '../../Components/Loading';
 import Title from '../../Components/admin/title';
 import { StarIcon,CheckIcon, Trash  } from 'lucide-react'
 import { kConverter } from '../../lib/kConverter';
-import { useAppContext } from '../../context/appContext';
+import { useAppContext } from '../../context/AppContext';
 import toast from 'react-hot-toast';
 
 const AddShows = () => {

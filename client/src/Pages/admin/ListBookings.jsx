@@ -3,7 +3,7 @@ import {dummyBookingData} from '../../assets/assets'
 import Loading from '../../Components/Loading';
 import Title from '../../Components/admin/title';
 import { dateFormat } from '../../lib/dateFormat';
-import { useAppContext } from '../../context/appContext';
+import { useAppContext } from '../../context/AppContext.jsx';
 const ListBookings = () => {
 
   const currency= import.meta.env.VITE_CURRENCY

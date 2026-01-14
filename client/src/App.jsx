@@ -14,7 +14,7 @@ import Dashboard from './Pages/admin/Dashboard'
 import AddShows from './Pages/admin/AddShows'
 import ListShows from './Pages/admin/ListShows'
 import ListBookings from './Pages/admin/ListBookings'
-import { useAppContext } from './context/appContext'
+import { useAppContext } from './context/AppContext.jsx'
 import { SignIn } from '@clerk/clerk-react'
 import Loading from './Components/Loading'
 const App = () => {

@@ -5,7 +5,7 @@ import Loading from '../Components/Loading'
 import BlurCircle from '../Components/BlurCircle'
 import timeFormat from '../lib/timeFormat'
 import { dateFormat } from '../lib/dateFormat'
-import { useAppContext } from '../context/appContext'
+import { useAppContext } from '../context/AppContext.jsx'
 
 const MyBookings = () => {
 

@@ -6,7 +6,7 @@ import { ArrowRightIcon, ClockIcon } from 'lucide-react'
 import isoTimeFormat from '../lib/isoTimeFormat'
 import BlurCircle from '../Components/BlurCircle'
 import toast from 'react-hot-toast'
-import { useAppContext } from '../context/appContext'
+import { useAppContext } from '../context/AppContext.jsx'
 const SeatLayout = () => {
   
   const groupRows=[['A','B'],['C','D'],['E','F'],['G','H'],['I','J']]

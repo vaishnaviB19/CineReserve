@@ -1,7 +1,7 @@
 import React from 'react'
 import MovieCard from '../Components/MovieCard'
 import BlurCircle from '../Components/BlurCircle'
-import { useAppContext } from '../context/appContext'
+import { useAppContext } from '../context/AppContext.jsx'
 
 const Movies = () => {
 

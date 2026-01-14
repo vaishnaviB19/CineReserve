@@ -5,7 +5,7 @@ import Loading from '../../Components/Loading'
 import Title from '../../Components/admin/title';
 import BlurCircle from '../../Components/BlurCircle';
 import { dateFormat } from '../../lib/dateFormat';
-import { useAppContext } from '../../context/appContext';
+import { useAppContext } from '../../context/AppContext';
 const Dashboard = () => {
    
   const {axios, getToken, user, image_base_url} = useAppContext()
