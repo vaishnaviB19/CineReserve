@@ -76,11 +76,17 @@ const AddShows = () => {
 }
 
 
-    const showsInput = Object.entries(dateTimeSelection).flatMap(([date,time])=>({date,time}));
+    const showsInput = Object.entries(dateTimeSelection).flatMap(
+  ([date, times]) =>
+    times.map((time) => ({
+      showDateTime: new Date(`${date}T${time}`),
+      price: Number(showPrice),
+    }))
+);
 
     const payload = {
       movieId: selectedMovie,
-      showsInput,
+      shows:showsInput,
       showPrice: Number(showPrice),
     };
     console.log("Submitting show with movieId:", selectedMovie);
