@@ -73,12 +73,30 @@ if (!movie) {
 
     }
 
-    const showsToCreate = showsInput.map(({ date, time }) => ({
+    const showsToCreate = [];
+
+for (const { date, time } of showsInput) {
+  if (!Array.isArray(time)) continue;
+
+  for (const t of time) {
+    const dateTime = new Date(`${date}T${t}`);
+
+    if (isNaN(dateTime.getTime())) {
+      return res.status(400).json({
+        success: false,
+        message: `Invalid date-time: ${date} ${t}`,
+      });
+    }
+
+    showsToCreate.push({
       movie: movie._id,
-      showDateTime: new Date(`${date}T${time}`),
+      showDateTime: dateTime,
       showPrice,
       occupiedSeats: {},
-    }));
+    });
+  }
+}
+
     
     if(showsToCreate.length >0){
     await Show.insertMany(showsToCreate);
